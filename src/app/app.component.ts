@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { LambdadeltaComponentComponent } from "./lambdadelta-component/lambdadelta-component.component";
+import { BernkastelComponentComponent } from "./bernkastel-component/bernkastel-component.component";
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [LambdadeltaComponentComponent, BernkastelComponentComponent,RouterOutlet]
 })
 export class AppComponent {
-  title = 'LR9.1';
+  title = 'LR9';
+
+  onClick() {
+    alert('Кнопка натиснута!');
+  }
 }
